@@ -28,6 +28,7 @@ import ResizablePanelCollapsible from './resizable_panel_collapsible';
 import ResizablePanelCollapsibleResponsive from './resizable_panel_collapsible_responsive';
 import ResizablePanelCollapsibleOpts from './resizable_panel_collapsible_options';
 import ResizablePanelCollapsibleExt from './resizable_panel_collapsible_external';
+import ResizableContainerReversePortals from './resizable_container_reverse_portals';
 
 const ResizableContainerSource = require('!!raw-loader!./resizable_container_basic');
 const ResizableContainerVerticalSource = require('!!raw-loader!./resizable_container_vertical');
@@ -37,6 +38,7 @@ const ResizablePanelCollapsibleSource = require('!!raw-loader!./resizable_panel_
 const ResizablePanelCollapsibleResponsiveSource = require('!!raw-loader!./resizable_panel_collapsible_responsive');
 const ResizablePanelCollapsibleOptsSource = require('!!raw-loader!./resizable_panel_collapsible_options');
 const ResizablePanelCollapsibleExtSource = require('!!raw-loader!./resizable_panel_collapsible_external');
+const ResizableContainerReversePortalsSource = require('!!raw-loader!./resizable_container_reverse_portals');
 
 const basicSnippet = `<EuiResizableContainer>
   {(EuiResizablePanel, EuiResizableButton) => (
@@ -190,6 +192,23 @@ export const ResizableContainerExample = {
     </EuiText>
   ),
   sections: [
+    {
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: ResizableContainerReversePortalsSource,
+        },
+      ],
+      title: 'Resizing issues with reverse portals',
+      text: (
+        <p>
+          When using react-reverse-portal resizing stops working whenever the
+          mouse leaves the resize button element while dragging.
+        </p>
+      ),
+      demo: <ResizableContainerReversePortals />,
+      snippet: '',
+    },
     {
       source: [
         {

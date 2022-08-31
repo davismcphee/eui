@@ -82,6 +82,7 @@
     "react-focus-on": "^3.5.4",
     "react-input-autosize": "^3.0.0",
     "react-is": "^17.0.2",
+    "react-reverse-portal": "^2.1.1",
     "react-virtualized-auto-sizer": "^1.0.6",
     "react-window": "^1.8.6",
     "refractor": "^3.5.0",
@@ -251,8 +252,8 @@
   },
   "peerDependencies": {
     "@elastic/datemath": "^5.0.2",
-    "@emotion/react": "11.x",
     "@emotion/cache": "11.x",
+    "@emotion/react": "11.x",
     "@types/react": "^16.9 || ^17.0",
     "@types/react-dom": "^16.9 || ^17.0",
     "moment": "^2.13.0",
